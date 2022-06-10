@@ -11,9 +11,7 @@ pdf_url = sys.argv[1] #example https://bildungsportal.sachsen.de/opal/oer/8I6sM5
 Path("temp").mkdir(parents=True, exist_ok=True)
 #downloads the file to temp dir and names it temp
 pdf_filename, headers = urllib.request.urlretrieve(pdf_url, "temp/temp")
-    # get the target pdf file from the command-line arguments
-    #pdf_filename = sys.argv[1]
-    #print(pdf_filename)
+
 # read the pdf file
 pdf = pikepdf.Pdf.open(pdf_filename)
 docinfo = pdf.docinfo
