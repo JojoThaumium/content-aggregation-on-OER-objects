@@ -7,7 +7,7 @@ name = "pypi"
 pandas = "*"
 jupyter = "*"
 jupyterlab = "*"
-
+pikepdf = "*"
 [dev-packages]
 
 [requires]
