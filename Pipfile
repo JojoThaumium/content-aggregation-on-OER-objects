@@ -9,6 +9,8 @@ jupyter = "*"
 jupyterlab = "*"
 pikepdf = "*"
 seaborn = "*"
+matplotlib = "*"
+
 [dev-packages]
 
 [requires]
