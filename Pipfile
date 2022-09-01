@@ -8,7 +8,6 @@ pandas = "*"
 jupyter = "*"
 jupyterlab = "*"
 pikepdf = "*"
-seaborn = "*"
 matplotlib = "*"
 
 [dev-packages]
