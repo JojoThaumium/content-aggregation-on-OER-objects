@@ -9,6 +9,7 @@ jupyter = "*"
 jupyterlab = "*"
 pikepdf = "*"
 matplotlib = "*"
+elyra-pipeline-editor-extension = "*"
 
 [dev-packages]
 
