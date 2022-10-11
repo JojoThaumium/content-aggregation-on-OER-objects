@@ -72,17 +72,18 @@
           "op": "execute-notebook-node",
           "app_data": {
             "component_parameters": {
-              "filename": "loopedcontentaggrOER.ipynb",
+              "dependencies": [],
+              "include_subdirectories": false,
               "outputs": [
                 "data/meta.csv"
               ],
               "env_vars": [],
+              "kubernetes_pod_annotations": [],
+              "kubernetes_pod_labels": [],
               "kubernetes_secrets": [],
               "kubernetes_tolerations": [],
-              "kubernetes_pod_annotations": [],
-              "dependencies": [],
-              "include_subdirectories": false,
               "mounted_volumes": [],
+              "filename": "loopedcontentaggrOER.ipynb",
               "runtime_image": "amancevice/pandas:1.4.1"
             },
             "label": "",
@@ -236,6 +237,11 @@
                   "id": "740517b2-ab4d-4775-9133-cc5f582cfb34",
                   "node_id_ref": "8591ae16-4dd0-436f-95c2-d8e6214de589",
                   "port_id_ref": "outPort"
+                },
+                {
+                  "id": "43fd4ad5-4895-45fa-9cb5-61fc3efc95a1",
+                  "node_id_ref": "954ea028-1a33-41e6-9276-8fd813efb4a9",
+                  "port_id_ref": "outPort"
                 }
               ]
             }
@@ -317,15 +323,85 @@
               }
             }
           ]
+        },
+        {
+          "id": "954ea028-1a33-41e6-9276-8fd813efb4a9",
+          "type": "execution_node",
+          "op": "execute-notebook-node",
+          "app_data": {
+            "component_parameters": {
+              "dependencies": [],
+              "include_subdirectories": false,
+              "outputs": [
+                "data/langmeta.csv"
+              ],
+              "env_vars": [],
+              "kubernetes_pod_annotations": [],
+              "kubernetes_pod_labels": [],
+              "kubernetes_secrets": [],
+              "kubernetes_tolerations": [],
+              "mounted_volumes": [],
+              "filename": "textaggregation.ipynb"
+            },
+            "label": "",
+            "ui_data": {
+              "label": "textaggregation.ipynb",
+              "image": "/static/elyra/notebook.svg",
+              "x_pos": 528,
+              "y_pos": 117,
+              "description": "Run notebook file"
+            }
+          },
+          "inputs": [
+            {
+              "id": "inPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Input Port"
+                }
+              },
+              "links": [
+                {
+                  "id": "58851ae7-526b-441c-9d6f-eb7283c0a30b",
+                  "node_id_ref": "b5e8b4f0-0693-445a-a3ea-956c4c7fa5b6",
+                  "port_id_ref": "outPort"
+                }
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "id": "outPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Output Port"
+                }
+              }
+            }
+          ]
         }
       ],
       "app_data": {
         "ui_data": {
           "comments": []
         },
-        "version": 7,
+        "version": 8,
         "properties": {
           "pipeline_defaults": {
+            "kubernetes_pod_annotations": [],
+            "kubernetes_pod_labels": [],
+            "mounted_volumes": [],
+            "kubernetes_tolerations": [],
+            "env_vars": [],
+            "kubernetes_secrets": [],
             "runtime_image": "amancevice/pandas:1.4.1"
           },
           "name": "Phase1",
