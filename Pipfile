@@ -10,6 +10,8 @@ jupyterlab = "*"
 pikepdf = "*"
 matplotlib = "*"
 elyra-pipeline-editor-extension = "*"
+lingua-language-detector = "*"
+pypdf2 = "*"
 
 [dev-packages]
 

@@ -16,7 +16,8 @@
             "component_parameters": {
               "filename": "findpdfincontent.ipynb",
               "outputs": [
-                "data\\PDFURLs.csv"
+                "data/PDFURLs.csv",
+                "data/content.json"
               ],
               "env_vars": [],
               "kubernetes_secrets": [],
@@ -31,8 +32,8 @@
             "ui_data": {
               "label": "findpdfincontent.ipynb",
               "image": "/static/elyra/notebook.svg",
-              "x_pos": 261,
-              "y_pos": 209,
+              "x_pos": 50,
+              "y_pos": 50,
               "description": "Run notebook file"
             }
           },
@@ -73,7 +74,7 @@
             "component_parameters": {
               "filename": "loopedcontentaggrOER.ipynb",
               "outputs": [
-                "data\\meta.csv"
+                "data/meta.csv"
               ],
               "env_vars": [],
               "kubernetes_secrets": [],
@@ -88,8 +89,8 @@
             "ui_data": {
               "label": "loopedcontentaggrOER.ipynb",
               "image": "/static/elyra/notebook.svg",
-              "x_pos": 519,
-              "y_pos": 254,
+              "x_pos": 530,
+              "y_pos": 50,
               "description": "Run notebook file"
             }
           },
@@ -107,8 +108,8 @@
               },
               "links": [
                 {
-                  "id": "edfd15b3-8058-47b1-8d36-dd863b52123c",
-                  "node_id_ref": "440b6dcb-6b01-4bcc-8ab7-1be9273b0798",
+                  "id": "26ef4fb7-1809-446c-a619-173de1e761be",
+                  "node_id_ref": "b5e8b4f0-0693-445a-a3ea-956c4c7fa5b6",
                   "port_id_ref": "outPort"
                 }
               ]
@@ -150,8 +151,8 @@
             "ui_data": {
               "label": "metaevaluation.ipynb",
               "image": "/static/elyra/notebook.svg",
-              "x_pos": 756,
-              "y_pos": 327,
+              "x_pos": 1010,
+              "y_pos": 50,
               "description": "Run notebook file"
             }
           },
@@ -169,8 +170,134 @@
               },
               "links": [
                 {
-                  "id": "ea9e48bf-9e51-4dbc-9130-2d450ab61d60",
+                  "id": "3c937122-8112-4e9b-a941-1897cd4b3bf6",
+                  "node_id_ref": "1682f4bc-123d-4040-9a6b-499f567fe341",
+                  "port_id_ref": "outPort"
+                }
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "id": "outPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Output Port"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "1682f4bc-123d-4040-9a6b-499f567fe341",
+          "type": "execution_node",
+          "op": "execute-notebook-node",
+          "app_data": {
+            "component_parameters": {
+              "filename": "datafusion.ipynb",
+              "outputs": [
+                "data/fusedcontent.json"
+              ],
+              "env_vars": [],
+              "kubernetes_secrets": [],
+              "kubernetes_tolerations": [],
+              "kubernetes_pod_annotations": [],
+              "dependencies": [],
+              "include_subdirectories": false,
+              "mounted_volumes": []
+            },
+            "label": "",
+            "ui_data": {
+              "label": "datafusion.ipynb",
+              "image": "/static/elyra/notebook.svg",
+              "x_pos": 770,
+              "y_pos": 50,
+              "description": "Run notebook file"
+            }
+          },
+          "inputs": [
+            {
+              "id": "inPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Input Port"
+                }
+              },
+              "links": [
+                {
+                  "id": "740517b2-ab4d-4775-9133-cc5f582cfb34",
                   "node_id_ref": "8591ae16-4dd0-436f-95c2-d8e6214de589",
+                  "port_id_ref": "outPort"
+                }
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "id": "outPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Output Port"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "b5e8b4f0-0693-445a-a3ea-956c4c7fa5b6",
+          "type": "execution_node",
+          "op": "execute-notebook-node",
+          "app_data": {
+            "component_parameters": {
+              "filename": "download.ipynb",
+              "outputs": [
+                "data/downloadedpdf.csv"
+              ],
+              "env_vars": [],
+              "kubernetes_secrets": [],
+              "kubernetes_tolerations": [],
+              "kubernetes_pod_annotations": [],
+              "dependencies": [],
+              "include_subdirectories": false,
+              "mounted_volumes": []
+            },
+            "label": "",
+            "ui_data": {
+              "label": "download.ipynb",
+              "image": "/static/elyra/notebook.svg",
+              "x_pos": 290,
+              "y_pos": 50,
+              "description": "Run notebook file"
+            }
+          },
+          "inputs": [
+            {
+              "id": "inPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Input Port"
+                }
+              },
+              "links": [
+                {
+                  "id": "1769a761-356b-4d73-9779-56a360fba659",
+                  "node_id_ref": "440b6dcb-6b01-4bcc-8ab7-1be9273b0798",
                   "port_id_ref": "outPort"
                 }
               ]
