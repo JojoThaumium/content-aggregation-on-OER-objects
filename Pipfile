@@ -12,6 +12,9 @@ matplotlib = "*"
 elyra-pipeline-editor-extension = "*"
 lingua-language-detector = "*"
 pypdf2 = "*"
+pymupdf = "*"
+scikit-learn = "*"
+requests = "*"
 
 [dev-packages]
 
