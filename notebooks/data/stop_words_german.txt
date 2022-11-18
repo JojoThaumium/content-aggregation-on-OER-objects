@@ -49,6 +49,7 @@ bis
 bisher
 bist
 c
+co
 d
 da
 dabei
@@ -182,6 +183,7 @@ etwa
 etwas
 euch
 f
+freiberg
 früher
 fünf
 fünfte
