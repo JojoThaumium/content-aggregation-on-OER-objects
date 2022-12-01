@@ -172,7 +172,7 @@ ende
 endlich
 entweder
 er
-Ernst
+ernst
 erst
 erste
 ersten
@@ -183,7 +183,6 @@ etwa
 etwas
 euch
 f
-freiberg
 früher
 fünf
 fünfte
@@ -397,7 +396,7 @@ oder
 offen
 oft
 ohne
-Ordnung
+ordnung
 p
 q
 r
@@ -416,7 +415,7 @@ sagte
 sah
 satt
 schlecht
-Schluss
+schluss
 schon
 sechs
 sechste
@@ -499,7 +498,7 @@ vom
 von
 vor
 w
-wahr?
+wahr
 während
 währenddem
 währenddessen
