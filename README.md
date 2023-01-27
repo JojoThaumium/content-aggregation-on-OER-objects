@@ -1,7 +1,7 @@
 content-aggregation-on-OER-objects
-
-This Software downloads OER PDF objects from OPAL and aggregates Metadata about them.
 =======
+This Software downloads OER PDF objects from OPAL and aggregates Metadata about them.
+
 # Installation 
 
 Install `pipenv` on your computer and initalize the virtual environment by 
@@ -10,7 +10,7 @@ Install `pipenv` on your computer and initalize the virtual environment by
 pipenv install 
 ```
 The command installs python packages for data processing (`pandas`) and programming (`jupyterlab`) and all other used packages.
-=======
+
 # Execution
 Afterwards you can start the different notebooks by executing
 
