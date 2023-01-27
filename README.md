@@ -1,5 +1,5 @@
 content-aggregation-on-OER-objects
-=======
+
 This Software downloads OER PDF objects from OPAL and aggregates Metadata about them.
 =======
 # Installation 
